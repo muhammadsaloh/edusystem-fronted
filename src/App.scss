@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+
+.container {
+  width: 1200px;
+  margin: 100px auto;
+  /* border: 1px solid red; */
+}
+
+.form {
+  width: 300px;
+  margin: 100px auto;
+  border: 1px solid gray;
+  padding: 10px 20px;
+}
