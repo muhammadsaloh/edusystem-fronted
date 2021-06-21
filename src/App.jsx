@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React from 'react'
 import About from './Router/About/route'
 import Course from './Router/Course/route'
-
+import Blog from './Router/Blog/route'
 import "./App.scss"
 
 function App () {
@@ -10,11 +11,14 @@ function App () {
 		<>
 			<Router>
 				<Switch>
-					<Route path="/" exact>
+					<Route exact path="/">
 						<About />
 					</Route>
-					<Route path="/courses" exact>
+					<Route path="/courses">
 						<Course />
+					</Route>
+					<Route path="/blog">
+						<Blog />
 					</Route>
 				</Switch>
 			</Router>
