@@ -1,3 +1,4 @@
+import React from 'react'
 import './route.scss'
 import Header from '../../Components/Header/route'
 
