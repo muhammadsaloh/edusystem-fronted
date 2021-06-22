@@ -15,17 +15,21 @@
         nav {
             transform: translateX(50px);
             ul {
-                width: 350px;
+                width: 370px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 li {
                     transition: opacity .4s ease;
                     height: 25px;
-                    // border: 1px solid red;
                     cursor: pointer;
+                    position: relative;
+                    svg {
+                        position: absolute;
+                        top: 5px;
+                        left: -20px;
+                    }
                     a {
-                        // padding: 10px 0px;
                         color: #333333;
                     }
                 }

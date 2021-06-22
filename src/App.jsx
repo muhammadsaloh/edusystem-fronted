@@ -9,6 +9,8 @@ import About from './Router/About/route'
 import Course from './Router/Course/route'
 import Blog from './Router/Blog/route'
 import Contact from './Router/Contact/route'
+import Login from './Components/Login/route'
+import Registration from './Components/Registration/route'
 import "./App.scss"
 
 function App () {
@@ -26,8 +28,14 @@ function App () {
 					<Route path="/blog">
 						<Blog />
 					</Route>
-					<Route>
+					<Route path="/contact">
 						<Contact />
+					</Route>
+					<Route path="/login">
+						<Login />
+					</Route>
+					<Route path="/registration">
+						<Registration />
 					</Route>
 				</Switch>
 			</Router>
