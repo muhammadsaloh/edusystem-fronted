@@ -11,6 +11,7 @@ import Blog from './Router/Blog/route'
 import Contact from './Router/Contact/route'
 import Login from './Components/Login/route'
 import Registration from './Components/Registration/route'
+import ValidateCode from './Components/ValidateCode/route'
 import "./App.scss"
 
 function App () {
@@ -37,11 +38,18 @@ function App () {
 					<Route path="/registration">
 						<Registration />
 					</Route>
+					<Route path="/validate-code">
+						<ValidateCode />
+					</Route>
 				</Switch>
 			</Router>
 		</>
 	)
 }
 
+
 export default App
+
+
+
 

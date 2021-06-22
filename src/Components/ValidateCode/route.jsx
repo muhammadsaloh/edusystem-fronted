@@ -1,46 +1,37 @@
-import { 
-    Link
-} from 'react-router-dom'
 import "./route.scss"
 
 import { useState, useEffect } from 'react'
 
-function Login () {
+function ValidateCode () {
 
-	const [phone, setPhone] = useState("")
+	const [code, setCode] = useState("")
 	const [submit, setSubmit] = useState(false)
 	const [span, setSpan] = useState("")
-
+    
 	useEffect(() => {
-		if(submit && phone) {
+		if(submit && code) {
 
 			;(async () => {
-				const response = await fetch('http://192.168.1.57:9010/users/login', {
+				const response = await fetch('http://192.168.1.57:9010/users/validate-code', {
 					method: "post",
 					headers: {
 						"Content-type": "application/json"
 					},
 					body: JSON.stringify({
-						phone
+						code
 					})
 				})
 
 				const json = await response.json()
-                let { id } = json.id
-                if(id) {
-                    window.localStorage.removeItem('id')
-                } else {
-                    window.localStorage.setItem('id', id)
-                }
-				console.log(json.id);
+				console.log(json);
 
 				setSubmit(false)
-				setPhone("")
+				setCode("")
 				setSpan(json.message)
 			})()
 
 		}
-	}, [submit, phone, span])
+	}, [submit, code, span])
 
 	return (
         <>
@@ -56,30 +47,26 @@ function Login () {
                             setSpan()
                         }}
                     >
-                        <h2>Login</h2>
+                        <h2>Validate</h2>
                         <span className="alert">{span}</span>
                         <input
                         type="number"
                         required
-                        placeholder="Telefon raqam" 
+                        placeholder="Code" 
                         autoComplete="off" 
                         spellCheck={false} 
                         autoFocus={true}
-                        name="phone"
-                        onKeyUp={e => setPhone (e.target.value.trim() )} 
+                        name="code"
+                        onKeyUp={e => setCode (e.target.value.trim() )} 
                         />
                         <div>
-                            <button>Login</button>
+                            <button>Validate</button>
                         </div>
                     </form>
-                    <div className="one">
-                        <span>New User ?</span>
-                        <Link to="/registration">Registration</Link>
-                    </div>
                 </div>
             </main>
         </>
     )
 }
 
-export default Login
+export default ValidateCode

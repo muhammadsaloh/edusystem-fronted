@@ -85,12 +85,14 @@ function Registration () {
                         />
 
                         <input 
+                        required
                         type="date" 
                         name="bdate"
                         onChange={e => setDate (e.target.value.trim() )}
                         />
 
                         <select
+                        required
                             defaultValue={gender}
                             onChange={e => setGender(e.target.value)}
                         >
