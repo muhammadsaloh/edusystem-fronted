@@ -9,13 +9,15 @@ function ValidateCode () {
 	const [span, setSpan] = useState("")
     
 	useEffect(() => {
-		if(submit && code) {
-
-			;(async () => {
+        if(submit && code) {
+            
+            ;(async () => {
+                let id = window.localStorage.getItem('id')
 				const response = await fetch('http://192.168.1.57:9010/users/validate-code', {
 					method: "post",
 					headers: {
-						"Content-type": "application/json"
+						"Content-type": "application/json",
+                        "code-Validation-Id": id
 					},
 					body: JSON.stringify({
 						code
@@ -23,8 +25,16 @@ function ValidateCode () {
 				})
 
 				const json = await response.json()
-				console.log(json);
-
+                
+                let { token } = json
+                try {
+                    if(token) {
+                        window.localStorage.setItem('token', token)
+                        window.location.href = "http://192.168.1.57:3000/"
+                    }
+                } catch(e) {
+                    console.log(e);
+                }
 				setSubmit(false)
 				setCode("")
 				setSpan(json.message)

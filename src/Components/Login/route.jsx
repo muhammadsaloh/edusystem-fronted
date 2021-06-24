@@ -26,13 +26,16 @@ function Login () {
 				})
 
 				const json = await response.json()
-                let { id } = json.id
-                if(id) {
-                    window.localStorage.removeItem('id')
-                } else {
-                    window.localStorage.setItem('id', id)
+                let { id } = json
+
+                try {
+                    if(id) {
+                        window.localStorage.setItem('id', id)
+                    }
+                } catch(e) {
+                    console.log(e);
                 }
-				console.log(json.id);
+                window.location.href = "http://192.168.1.57:3000/validate-code"
 
 				setSubmit(false)
 				setPhone("")
