@@ -1,7 +1,8 @@
 import { 
 	BrowserRouter as Router, 
 	Route, 
-	Switch 
+	Switch,
+	Redirect
 } from 'react-router-dom'
 
 import React from 'react'
@@ -12,10 +13,11 @@ import Contact from './Router/Contact/route'
 import Login from './Components/Login/route'
 import Registration from './Components/Registration/route'
 import ValidateCode from './Components/ValidateCode/route'
+import Accaunt from './Router/Accaunt/route'
 import "./App.scss"
 
 function App () {
-
+	const token = window.localStorage.getItem('token')
 	return (
 		<>
 			<Router>
@@ -27,19 +29,22 @@ function App () {
 						<Course />
 					</Route>
 					<Route path="/blog">
-						<Blog />
+						{ token ? <Blog /> : <Redirect to="/login" />}
 					</Route>
 					<Route path="/contact">
 						<Contact />
 					</Route>
 					<Route path="/login">
-						<Login />
+						{ !token ? <Login /> : <Redirect to="/" />}
 					</Route>
 					<Route path="/registration">
-						<Registration />
+						{ !token ? <Registration /> : <Redirect to="/" />}
 					</Route>
 					<Route path="/validate-code">
-						<ValidateCode />
+						{ !token ? <ValidateCode /> : <Redirect to="/" />}
+					</Route>
+					<Route path="/accaunt">
+						<Accaunt />
 					</Route>
 				</Switch>
 			</Router>

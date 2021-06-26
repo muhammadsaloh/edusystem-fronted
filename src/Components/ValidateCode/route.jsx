@@ -1,7 +1,11 @@
 import "./route.scss"
 
 import { useState, useEffect } from 'react'
-
+let n = window.localStorage.getItem('code')
+let tokenn = window.localStorage.getItem('token')
+if(!(tokenn) && n) {
+    alert(`${n}`)
+}
 function ValidateCode () {
 
 	const [code, setCode] = useState("")
@@ -13,7 +17,9 @@ function ValidateCode () {
             
             ;(async () => {
                 let id = window.localStorage.getItem('id')
-				const response = await fetch('http://192.168.1.57:9010/users/validate-code', {
+                
+                
+				const response = await fetch('http://localhost:9010/users/validate-code', {
 					method: "post",
 					headers: {
 						"Content-type": "application/json",
@@ -30,7 +36,7 @@ function ValidateCode () {
                 try {
                     if(token) {
                         window.localStorage.setItem('token', token)
-                        window.location.href = "http://192.168.1.57:3000/"
+                        window.location.href = "http://localhost:3000/"
                     }
                 } catch(e) {
                     console.log(e);

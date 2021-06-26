@@ -15,7 +15,7 @@ function Login () {
 		if(submit && phone) {
 
 			;(async () => {
-				const response = await fetch('http://192.168.1.57:9010/users/login', {
+				const response = await fetch('http://localhost:9010/users/login', {
 					method: "post",
 					headers: {
 						"Content-type": "application/json"
@@ -26,16 +26,16 @@ function Login () {
 				})
 
 				const json = await response.json()
-                let { id } = json
-
+                let { id, code } = json
                 try {
-                    if(id) {
+                    if(id, code) {
                         window.localStorage.setItem('id', id)
+                        window.localStorage.setItem('code', code)
                     }
                 } catch(e) {
                     console.log(e);
                 }
-                window.location.href = "http://192.168.1.57:3000/validate-code"
+                window.location.href = "http://localhost:3000/validate-code"
 
 				setSubmit(false)
 				setPhone("")
@@ -86,3 +86,27 @@ function Login () {
 }
 
 export default Login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

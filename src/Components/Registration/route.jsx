@@ -18,7 +18,7 @@ function Registration () {
 		if(submit && phone && name && bdate && gender) {
 
 			;(async () => {
-				const response = await fetch('http://192.168.1.57:9010/users/signup', {
+				const response = await fetch('http://localhost:9010/users/signup', {
 					method: "post",
 					headers: {
 						"Content-type": "application/json"
@@ -93,8 +93,8 @@ function Registration () {
 
                         <select
                         required
-                            defaultValue={gender}
-                            onChange={e => setGender(e.target.value)}
+                        defaultValue={gender}
+                        onChange={e => setGender(e.target.value)}
                         >
                             <option value="" disabled={true}>Select gender</option>
                             <option value="1">Male</option>
