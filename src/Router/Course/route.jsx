@@ -1,12 +1,16 @@
-import React from 'react'
-import Header from '../../Components/Header/route'
 import './route.scss'
+import React from 'react'
+
+import Header from '../../Components/Header/route'
+import Footer from '../../Components/Footer/route'
+
 
 function Course () {
     return (
         <>
             <Header />
             <Main />
+            <Footer />
         </>
     )
 }

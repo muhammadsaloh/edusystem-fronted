@@ -49,7 +49,7 @@ function Registration () {
         <>
             <main className="main-registration">
                 <div className="container">
-                    <h1>Ferrari</h1>
+                    <h1>EDCT</h1>
                     <form
                     className="form"
                         onSubmit={e => {
@@ -59,7 +59,7 @@ function Registration () {
                             setSpan()
                         }}
                     >
-                        <h2>Registration in Ferrari</h2>
+                        <h2>Registration in EDCT</h2>
                         {/* { span == "Successfully registrated"} */}
                         <span className="alert">{span}</span>
                         <input

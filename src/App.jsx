@@ -14,6 +14,7 @@ import Login from './Components/Login/route'
 import Registration from './Components/Registration/route'
 import ValidateCode from './Components/ValidateCode/route'
 import Accaunt from './Router/Accaunt/route'
+import NotFoundPage from './Components/NotfoundPage/route'
 import "./App.scss"
 
 function App () {
@@ -44,8 +45,9 @@ function App () {
 						{ !token ? <ValidateCode /> : <Redirect to="/" />}
 					</Route>
 					<Route path="/accaunt">
-						<Accaunt />
+						{ token ? <Accaunt /> : <Redirect to="/" />}
 					</Route>
+					<Route exact component={NotFoundPage} />
 				</Switch>
 			</Router>
 		</>

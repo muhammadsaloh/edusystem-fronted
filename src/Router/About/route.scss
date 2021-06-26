@@ -33,17 +33,17 @@
                     }
                 }
                 .first {
-                    background-color: #fa6a62;
-                    color: #fff;
+                    // background-color: #fa6a62;
+                    color:rgba(51, 51, 51, 0.503623);
                     transition: all .4s linear;
+                    border: 1px solid #fdcbc2;
                 }
                 .first:active {
                     opacity: 0.4;
                 }
                 .first:hover {
-                    color:rgba(51, 51, 51, 0.503623);
-                    border: 1px solid #fdcbc2;
-                    background-color: #fef0e8;
+                    background-color: #fa6a62;
+                    color: #fff;
                 }
                 .second {
                     color:rgba(51, 51, 51, 0.503623);

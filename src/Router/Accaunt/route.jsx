@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 import { useState, useEffect } from 'react'
 import moment from 'moment'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import Header from '../../Components/Header/route'
 import male from '../img/user.png'
@@ -13,12 +13,13 @@ function Accaunt () {
     return (
         <>
             <Header />
-            <Main />
+            <Get />
         </>
     )
 }
 
-const Main = () => {
+
+const Get = () => {
     const [modal, setModal] = useState(false);
 
     const toggle = () => setModal(!modal);
@@ -28,32 +29,38 @@ const Main = () => {
     const [phone, setPhone] = useState("")
     const [role, serRole] = useState("")
     const [bdate, setBdate] = useState("")
+    // eslint-disable-next-line 
     const [photo, setPhoto] = useState("")
     const [gender, setGender] = useState("")
     
+    const setExit = () => {
+        window.localStorage.removeItem('token')
+        window.localStorage.removeItem('code')
+        window.localStorage.removeItem('id')
+        window.location.reload()
+    }
     
     useEffect(() => {
         const token = window.localStorage.getItem('token')
-        ;(async () => {
-            const headers = { 'Content-Type': 'application/json',
-                              'Authorization': `${token}`
-            }
-            let response = await fetch("http://localhost:9010/users", { headers })
-            
-            let json = await response.json()
-            const { name, email, phone, role, bdate, photo, gender } = json.data
-            console.log(gender);
-            setName(name)
-            setEmail(email)
-            setPhone(phone)
-            serRole(role)
-            setBdate(moment(bdate).utc().format('MM/DD/YYYY'))
-            setPhoto(photo)
-            setGender(gender)
-        })()
+            ;(async () => {
+                const headers = { 'Content-Type': 'application/json',
+                                  'Authorization': `${token}`
+                }
+                let response = await fetch("http://localhost:9010/users", { headers })
+                
+                let json = await response.json()
+                const { name, email, phone, role, bdate, photo, gender } = json.data
+                
+                setName(name)
+                setEmail(email)
+                setPhone(phone)
+                serRole(role)
+                setBdate(moment(bdate).utc().format('MM/DD/YYYY'))
+                setPhoto(photo)
+                setGender(gender)
+            })()
     }, [])
 
-        
     return (
         <>
             <main className="main-accaunt">
@@ -68,7 +75,7 @@ const Main = () => {
                     </div>
                     <section className="main-data">
                         <div className="img">
-                            { gender == 'male' ? <img src={male} alt="user png" width="100" height="100"/> : <img src={female} alt="user png" width="100" height="100"/> }
+                            { gender === 'male' ? <img src={male} alt="user png" width="100" height="100"/> : <img src={female} alt="user png" width="100" height="100"/> }
                         </div>
                         <ul>
                             <li>Name: {name}</li>
@@ -83,8 +90,9 @@ const Main = () => {
                                     <ModalBody>
                                         <Edit />
                                     </ModalBody>
-                                <ModalFooter>
-                                <Button color="secondary" onClick={toggle}>Cancel</Button>
+                                <ModalFooter className="justify-content-md-center justify-content-xl-between">
+                                    <Button color="danger" onClick={setExit}>Exit</Button>
+                                    <Button color="secondary" onClick={toggle}>Cancel</Button>
                                 </ModalFooter>
                             </Modal>
                         </ul>
@@ -104,8 +112,8 @@ const Edit = () => {
 	const [span, setSpan] = useState("")
 	const [submit, setSubmit] = useState(false)
 
-    const token = window.localStorage.getItem('token')
     useEffect(() => {
+        const token = window.localStorage.getItem('token')
         if(submit && name && gender && email && bdate) {
 
 			;(async () => {

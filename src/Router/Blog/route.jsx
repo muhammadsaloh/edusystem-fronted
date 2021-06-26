@@ -1,13 +1,14 @@
+import './route.scss'
 import React from 'react'
 import Header from '../../Components/Header/route'
-import './route.scss'
-
+import Footer from '../../Components/Footer/route'
 
 function Blog () {
     return (
         <>
             <Header />
             <Main />
+            <Footer />
         </>
     )
 }

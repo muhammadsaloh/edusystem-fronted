@@ -27,13 +27,10 @@ function Login () {
 
 				const json = await response.json()
                 let { id, code } = json
-                try {
-                    if(id, code) {
-                        window.localStorage.setItem('id', id)
-                        window.localStorage.setItem('code', code)
-                    }
-                } catch(e) {
-                    console.log(e);
+                // eslint-disable-next-line
+                if(id, code) {
+                    window.localStorage.setItem('id', id)
+                    window.localStorage.setItem('code', code)
                 }
                 window.location.href = "http://localhost:3000/validate-code"
 
@@ -49,7 +46,7 @@ function Login () {
         <>
             <main className="main-login">
                 <div className="container">
-                    <h1>Ferrari</h1>
+                    <h1>EDCT</h1>
                     <form
                     className="form"
                         onSubmit={e => {

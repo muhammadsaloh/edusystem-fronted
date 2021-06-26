@@ -1,7 +1,7 @@
 import React from 'react'
 import './route.scss'
 import Header from '../../Components/Header/route'
-
+import Footer from '../../Components/Footer/route'
 // Images  
 import centreImg from '../img/pic.png';
 import man from '../img/man.png';
@@ -15,6 +15,7 @@ function About () {
         <>
             <Header />
             <Main />
+            <Footer />
         </>
     )
 }
@@ -35,12 +36,12 @@ const Main = () => {
                         </button>
                     </div>
                     <div className="img-side-bar">
-                        <img className="centre" src={centreImg} />
-                        <img className="left" src={man} />
-                        <img className="right" src={woman} />
-                        <img className="side" src={oval} />
-                        <img className="top" src={top} />
-                        <img className="bottom" src={bottom} />
+                        <img className="centre" src={centreImg} alt="about png" />
+                        <img className="left" src={man} alt="about png" />
+                        <img className="right" src={woman} alt="about png" />
+                        <img className="side" src={oval} alt="about png" />
+                        <img className="top" src={top} alt="about png" />
+                        <img className="bottom" src={bottom} alt="about png" />
                     </div>
                 </div>
             </main>
