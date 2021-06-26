@@ -1,77 +1,77 @@
 .main-registration {
-    background-color: #f3f2f6;
-    height: 100vh;
+  background-color: #f3f2f6;
+  height: 100vh;
 
-    .container {
-        h1 {
-            padding-top: 50px;
-            font-weight: 400;
-            text-align: center;
-            font-size: 28px;
-        }
-
-        .form {
-            width: 500px;
-            background-color: #fff;
-            margin: 50px auto;
-            padding: 60px 80px;
-
-            h2 {
-                font-size: 28px;
-            }
-            span {
-                color: red;
-            }
-            input {
-                border: none;
-                outline: none;
-                border-bottom: 1px solid #666;
-                padding: 10px 0px;
-                width: 100%;
-                font-size: 15px;
-                margin: 10px 0px;
-            }
-            select {
-                border: none;
-                background-color: #fff;
-                outline: none;
-                border-bottom: 1px solid #666;
-                padding: 10px 0px;
-                width: 100%;
-                font-size: 15px;
-            }
-            input[type=number]::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-            }
-
-            div {
-                button {
-                    width: 100%;
-                    margin-top: 30px;
-                    border: none;
-                    outline: none;
-                    border-radius: 5px;
-                    font-size: 16px;
-                    padding: 10px 0px;
-                }
-            }
-        }
-
-        .one {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 300px;
-            margin: 0px auto;
-
-            span {
-                font-size: 20px;
-            }
-
-            a {
-                font-size: 23px;
-                text-decoration: underline;
-            }
-        }
+  .container {
+    h1 {
+      padding-top: 50px;
+      font-weight: 400;
+      text-align: center;
+      font-size: 28px;
     }
+
+    .form {
+      width: 500px;
+      background-color: #fff;
+      margin: 50px auto;
+      padding: 60px 80px;
+
+      h2 {
+        font-size: 28px;
+      }
+      span {
+        color: red;
+      }
+      input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #666;
+        padding: 10px 0px;
+        width: 100%;
+        font-size: 15px;
+        margin: 10px 0px;
+      }
+      select {
+        border: none;
+        background-color: #fff;
+        outline: none;
+        border-bottom: 1px solid #666;
+        padding: 10px 0px;
+        width: 100%;
+        font-size: 15px;
+      }
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      div {
+        button {
+          width: 100%;
+          margin-top: 30px;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          font-size: 16px;
+          padding: 10px 0px;
+        }
+      }
+    }
+
+    .one {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 300px;
+      margin: 0px auto;
+
+      span {
+        font-size: 20px;
+      }
+
+      a {
+        font-size: 23px;
+        text-decoration: underline;
+      }
+    }
+  }
 }

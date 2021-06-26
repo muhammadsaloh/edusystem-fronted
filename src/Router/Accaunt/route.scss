@@ -1,129 +1,125 @@
 .main-accaunt {
-    padding-top: 50px;
-    background-color: #fef0e8;
-    width: 100%;
-    padding-bottom: 150px;
+  padding-top: 50px;
+  background-color: #fef0e8;
+  width: 100%;
+  padding-bottom: 150px;
 
-    .container {
-        
-        h1 {
-            font-weight: 400;
-            padding-bottom: 20px;
-        }
-        .exit {
-            position: absolute;
-            top: -50px;
-            right: 0px;
-        }
-
-        div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 148px;
-            span {
-                color: rgba(51, 51, 51, 0.501557);
-            }
-        }
-        .main-data {
-            width: 900px;
-            min-height: 200px;
-            border: 3px solid rgba(240, 120, 103, 0.295828);
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            position: relative;
-            .img {
-                width: 300px;
-                img {
-                    width: 120px;
-                    height: 120px;
-                    border: 5px solid #333;
-                    border-radius: 50%;
-                }
-            }
-            ul {
-                width: 300px;
-                button {
-                    color: #fff;
-                    position: absolute;
-                    z-index: 2;
-                    right: 450px;
-                    display: none;
-                    font-size: 16px;
-                }
-            }
-            &:hover ul > button {
-                border: none;
-                background-color: transparent;
-                display: block;
-                outline: none;
-
-            }
-            &:hover {
-                &::after {
-                    content: "";
-                    width: 100%;
-                    min-height: 30px;
-                    position: absolute;
-                    background-color: #000;
-                    bottom: 0px;
-                    opacity: .5;
-                }
-            }
-        }
+  .container {
+    h1 {
+      font-weight: 400;
+      padding-bottom: 20px;
     }
+    .exit {
+      position: absolute;
+      top: -50px;
+      right: 0px;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 148px;
+      span {
+        color: rgba(51, 51, 51, 0.501557);
+      }
+    }
+    .main-data {
+      width: 900px;
+      min-height: 200px;
+      border: 3px solid rgba(240, 120, 103, 0.295828);
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      .img {
+        width: 300px;
+        img {
+          width: 120px;
+          height: 120px;
+          border: 5px solid #333;
+          border-radius: 50%;
+        }
+      }
+      ul {
+        width: 300px;
+        button {
+          color: #fff;
+          position: absolute;
+          z-index: 2;
+          right: 450px;
+          display: none;
+          font-size: 16px;
+        }
+      }
+      &:hover ul > button {
+        border: none;
+        background-color: transparent;
+        display: block;
+        outline: none;
+      }
+      &:hover {
+        &::after {
+          content: "";
+          width: 100%;
+          min-height: 30px;
+          position: absolute;
+          background-color: #000;
+          bottom: 0px;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
 }
 
-
 .form {
-    width: 400px;
+  width: 400px;
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 0px 40px;
+
+  .alert {
+    color: green;
+    font-size: 23px;
+    display: block;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #666;
+    width: 100%;
+    font-size: 15px;
+    margin: 10px 0px;
+  }
+
+  select {
+    border: none;
     background-color: #fff;
-    margin: 50px auto;
-    padding: 0px 40px;
-    
-    .alert {
-        color: green;
-        font-size: 23px;
-        display: block;
-        text-align: center;
-        padding: 0px;
-        margin: 0px;
+    outline: none;
+    border-bottom: 1px solid #666;
+    padding: 10px 0px;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  div {
+    button {
+      width: 100%;
+      margin-top: 30px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 10px 0px;
     }
-            h2 {
-                font-size: 28px;
-            }
-
-            input {
-                border: none;
-                outline: none;
-                border-bottom: 1px solid #666;
-                width: 100%;
-                font-size: 15px;
-                margin: 10px 0px;
-            }
-
-            select {
-                border: none;
-                background-color: #fff;
-                outline: none;
-                border-bottom: 1px solid #666;
-                padding: 10px 0px;
-                width: 100%;
-                font-size: 15px;
-            }
-
-            div {
-                button {
-                    width: 100%;
-                    margin-top: 30px;
-                    border: none;
-                    outline: none;
-                    border-radius: 5px;
-                    font-size: 16px;
-                    padding: 10px 0px;
-                }
-            }
-        }
-
+  }
+}

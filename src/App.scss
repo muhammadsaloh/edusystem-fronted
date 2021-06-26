@@ -3,7 +3,7 @@
 Variables
 ===============
 */
-  
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(184, 91%, 17%);
@@ -60,12 +60,12 @@ html {
   box-sizing: inherit;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
 
 body {
   margin: 0px;
   padding: 0px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.5;
   font-size: 0.875rem;
 }
