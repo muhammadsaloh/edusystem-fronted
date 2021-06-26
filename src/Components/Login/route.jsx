@@ -24,8 +24,8 @@ function Login () {
 						phone
 					})
 				})
-
 				const json = await response.json()
+                console.log(json);
                 let { id, code } = json
                 // eslint-disable-next-line
                 if(id, code) {
