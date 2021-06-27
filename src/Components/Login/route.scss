@@ -72,79 +72,79 @@
   }
 }
 
-// @media (min-width: 375px) {
-//   .main-login {
-//     // background-color: #f3f2f6;
-//     background-color: red;
-//     height: 100vh;
 
-//     .container {
-//       h1 {
-//         padding-top: 50px;
-//         font-weight: 400;
-//         text-align: center;
-//         font-size: 28px;
-//       }
+@media (max-width: 400px) {
+  .main-login {
+    background-color: #f3f2f6;
+    height: 100vh;
 
-//       .form {
-//         width: 200px;
-//         // min-height: 400px;
-//         background-color: #fff;
-//         margin: 50px auto;
-//         padding: 20px 30px;
+    .container {
+      h1 {
+        padding-top: 50px;
+        font-weight: 400;
+        text-align: center;
+        font-size: 25px;
+      }
 
-//         h2 {
-//           font-size: 18px;
-//         }
+      .form {
+        width: 300px;
+        background-color: #fff;
+        margin: 50px auto;
+        padding: 30px 50px;
 
-//         span {
-//           color: red;
-//         }
+        h2 {
+          font-size: 18px;
+        }
 
-//         input {
-//           margin-top: 50px;
-//           border: none;
-//           outline: none;
-//           border-bottom: 1px solid #666;
-//           padding: 6px 0px;
-//           // width: 100%;
-//           font-size: 10px;
-//         }
+        span {
+          color: red;
+        }
 
-//         input[type="number"]::-webkit-inner-spin-button {
-//           -webkit-appearance: none;
-//         }
+        input {
+          margin-top: 20px;
+          border: none;
+          outline: none;
+          border-bottom: 1px solid #666;
+          padding: 6px 0px;
+          width: 100%;
+          font-size: 13px;
+        }
 
-//         div {
-//           button {
-//             // width: 100%;
-//             // background-color: #fef0e8;
-//             margin-top: 30px;
-//             border: none;
-//             outline: none;
-//             border-radius: 5px;
-//             font-size: 16px;
-//             // padding: 10px 0px;
-//           }
-//         }
-//       }
+        input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
 
-//       .one {
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         width: 124px;
-//         margin: 0px auto;
+        div {
+          button {
+            width: 100%;
+            margin-top: 30px;
+            border: 1px solid red;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size: 14px;
+            // padding: 10px 0px;
+          }
+        }
+      }
 
-//         span {
-//           font-size: 10px;
-//         }
+      .one {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 164px;
+        margin: 0px auto;
 
-//         a {
-//           font-size: 10px;
-//           text-decoration: underline;
-//         }
-//       }
-//     }
-//   }
-// }
+        span {
+          font-size: 15px;
+        }
+
+        a {
+          font-size: 15px;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
