@@ -1,6 +1,7 @@
 .main-login {
   background-color: #f3f2f6;
   height: 100vh;
+
   .container {
     h1 {
       padding-top: 50px;
@@ -8,18 +9,22 @@
       text-align: center;
       font-size: 28px;
     }
-    .form {        
+
+    .form {
       width: 500px;
       // min-height: 400px;
       background-color: #fff;
       margin: 50px auto;
       padding: 60px 80px;
+
       h2 {
         font-size: 28px;
       }
+
       span {
         color: red;
       }
+
       input {
         margin-top: 50px;
         border: none;
@@ -29,9 +34,11 @@
         width: 100%;
         font-size: 18px;
       }
+
       input[type="number"]::-webkit-inner-spin-button {
         -webkit-appearance: none;
       }
+
       div {
         button {
           width: 100%;
@@ -45,15 +52,18 @@
         }
       }
     }
+
     .one {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 234px;
       margin: 0px auto;
+
       span {
         font-size: 20px;
       }
+
       a {
         font-size: 23px;
         text-decoration: underline;
@@ -61,3 +71,80 @@
     }
   }
 }
+
+// @media (min-width: 375px) {
+//   .main-login {
+//     // background-color: #f3f2f6;
+//     background-color: red;
+//     height: 100vh;
+
+//     .container {
+//       h1 {
+//         padding-top: 50px;
+//         font-weight: 400;
+//         text-align: center;
+//         font-size: 28px;
+//       }
+
+//       .form {
+//         width: 200px;
+//         // min-height: 400px;
+//         background-color: #fff;
+//         margin: 50px auto;
+//         padding: 20px 30px;
+
+//         h2 {
+//           font-size: 18px;
+//         }
+
+//         span {
+//           color: red;
+//         }
+
+//         input {
+//           margin-top: 50px;
+//           border: none;
+//           outline: none;
+//           border-bottom: 1px solid #666;
+//           padding: 6px 0px;
+//           // width: 100%;
+//           font-size: 10px;
+//         }
+
+//         input[type="number"]::-webkit-inner-spin-button {
+//           -webkit-appearance: none;
+//         }
+
+//         div {
+//           button {
+//             // width: 100%;
+//             // background-color: #fef0e8;
+//             margin-top: 30px;
+//             border: none;
+//             outline: none;
+//             border-radius: 5px;
+//             font-size: 16px;
+//             // padding: 10px 0px;
+//           }
+//         }
+//       }
+
+//       .one {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         width: 124px;
+//         margin: 0px auto;
+
+//         span {
+//           font-size: 10px;
+//         }
+
+//         a {
+//           font-size: 10px;
+//           text-decoration: underline;
+//         }
+//       }
+//     }
+//   }
+// }

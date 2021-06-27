@@ -6,8 +6,6 @@ import moment from "moment";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import Header from "../../Components/Header/route";
-import male from "../img/user.png";
-import female from "../img/female.png";
 
 function Accaunt() {
   return (
@@ -47,7 +45,6 @@ const Get = () => {
         Authorization: `${token}`,
       };
       let response = await fetch("http://localhost:9010/users", { headers });
-
       let json = await response.json();
       const { name, email, phone, role, bdate, photo, gender } = json.data;
 
@@ -82,9 +79,19 @@ const Get = () => {
           <section className="main-data">
             <div className="img">
               {gender === "male" ? (
-                <img src={male} alt="user png" width="100" height="100" />
+                <img
+                  src="./img/user.png"
+                  alt="user png"
+                  width="100"
+                  height="100"
+                />
               ) : (
-                <img src={female} alt="user png" width="100" height="100" />
+                <img
+                  src="./img/female.png"
+                  alt="user png"
+                  width="100"
+                  height="100"
+                />
               )}
             </div>
             <ul>
