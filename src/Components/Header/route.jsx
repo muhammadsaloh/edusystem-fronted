@@ -1,36 +1,57 @@
 import "./route.scss";
 
 import { NavLink } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
 // eslint-disable-next-line
 export default () => {
+
+  const [isActive, setActive] = useState(false);
+  
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
+  
   return (
     <div>
       <header className="header">
-        <div className="container header-section">
+        <section className="header-section">
           <div>
             <h1>EDCT</h1>
           </div>
-          <Nav />
-          <Social />
-          <div className="menu-bar">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M0 0H16V2H0V0ZM0 6H16V8H0V6ZM16 12H0V14H16V12Z"
-                fill="#F07867"
-              />
+            <Nav />
+            <Social />
+            <div className="menu-bar">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 0H16V2H0V0ZM0 6H16V8H0V6ZM16 12H0V14H16V12Z"
+                  fill="#F07867"
+                />
+              </svg>
+            </div>
+        </section>
+        <section className="header-sm">
+          <div className="header-sm__heading">
+            <h1>EDCT</h1>
+          </div>
+          <div className="header-sm__menu" onClick={toggleClass}>
+            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16V2H0V0ZM0 6H16V8H0V6ZM16 12H0V14H16V12Z" fill="#F07867"/>
             </svg>
           </div>
-        </div>
+        </section>
+        <section className={isActive ? "header-navbar" : "block"}>
+          <Nav />
+          <Social />
+        </section>
       </header>
     </div>
   );
@@ -43,41 +64,41 @@ const Nav = () => {
     <>
       <nav>
         <ul>
+          <NavLink exact to="/">
           <li>
-            <NavLink exact to="/">
               About
-            </NavLink>
           </li>
+          </NavLink>
+          <NavLink exact to="/courses">
           <li>
-            <NavLink exact to="/courses">
               Courses
-            </NavLink>
           </li>
+          </NavLink>
           {token && (
+            <NavLink exact to="/blog">
             <li>
-              <NavLink exact to="/blog">
                 Blog
-              </NavLink>
             </li>
+          </NavLink>
           )}
+          <NavLink exact to="/contact">
           <li>
-            <NavLink exact to="/contact">
               Contact
-            </NavLink>
           </li>
+          </NavLink>
           {token && (
+            <NavLink exact to="/accaunt">
             <li>
-              <NavLink exact to="/accaunt">
                 <svg fill="#262626" height="16" viewBox="0 0 32 32" width="16">
                   <path d="M16 0C7.2 0 0 7.1 0 16c0 4.8 2.1 9.1 5.5 12l.3.3C8.5 30.6 12.1 32 16 32s7.5-1.4 10.2-3.7l.3-.3c3.4-3 5.5-7.2 5.5-12 0-8.9-7.2-16-16-16zm0 29c-2.8 0-5.3-.9-7.5-2.4.5-.9.9-1.3 1.4-1.8.7-.5 1.5-.8 2.4-.8h7.2c.9 0 1.7.3 2.4.8.5.4.9.8 1.4 1.8-2 1.5-4.5 2.4-7.3 2.4zm9.7-4.4c-.5-.9-1.1-1.5-1.9-2.1-1.2-.9-2.7-1.4-4.2-1.4h-7.2c-1.5 0-3 .5-4.2 1.4-.8.6-1.4 1.2-1.9 2.1C4.2 22.3 3 19.3 3 16 3 8.8 8.8 3 16 3s13 5.8 13 13c0 3.3-1.2 6.3-3.3 8.6zM16 5.7c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 11c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"></path>
                 </svg>
                 Accaunt
-              </NavLink>
             </li>
+            </NavLink>
           )}
           {!token && (
+            <NavLink exact to="/login">
             <li>
-              <NavLink exact to="/login">
                 <svg
                   width="16"
                   height="16"
@@ -96,8 +117,8 @@ const Nav = () => {
                   ></path>
                 </svg>
                 Login
-              </NavLink>
             </li>
+            </NavLink>
           )}
         </ul>
       </nav>

@@ -2,6 +2,12 @@
   background-color: #fef0e8;
   width: 100%;
   padding: 1rem 2rem;
+  &-sm {
+    display: none;
+  }
+  .block {
+    display: none;
+  }
   .header-section {
     display: flex;
     justify-content: space-between;
@@ -24,13 +30,11 @@
           height: 25px;
           cursor: pointer;
           position: relative;
+          color: #333333;
           svg {
             position: absolute;
             top: 5px;
             left: -18px;
-          }
-          a {
-            color: #333333;
           }
         }
         li:hover {
@@ -75,8 +79,101 @@
   }
 }
 
-// @media (min-width: 480px) {
-//   body {
-//     background-color: green;
-//   }
-// }
+@media (max-width: 375px) {
+  .header {
+    padding: 0px;
+    background-color: #fef0e8;
+    width: 100%;
+    .header-section {
+      h1 {
+        display: none;
+      }
+
+      nav {
+        transform: translateX(50px);
+
+        ul {
+          display: none;             
+        }
+      }
+
+      div {
+        ul {
+          display: none;
+        }
+      }
+    }
+
+    &-sm {
+      border: 10px solid transparent;
+      width: 100%;
+      margin: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px;
+      margin: 0px;
+
+      &__heading {
+        h1 {
+          margin: 0px;
+          transform: matrix(1, 0, 0, -1, 0, 0);
+          font-weight: 400;
+          left: 68px;
+          top: 85px;
+        }
+      }
+
+      &__menu {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(240, 120, 103, 0.295828);
+      }
+    }
+
+    &-navbar {
+      width: 100%;
+      nav {
+        background-color: rgba(240, 120, 103, 0.295828);
+        ul {
+          li {
+            padding: 8px 0px;
+            display: flex;
+            justify-content: center;
+            color: #333;
+            &:hover {
+              opacity: 0.8;
+              background-color: #f8d843;
+            }
+          }
+        }
+      }
+      
+      div {
+        background-color: rgba(240, 120, 103, 0.295828);
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            opacity: 0.8;
+            background-color: #f8d843;
+          }
+          li {
+            padding: 8px 10px;
+              &:hover {
+                transform: translateY(-5px);
+              }
+          }
+        }
+      }
+    }
+    .block {
+      display: none;
+    }
+  }
+}

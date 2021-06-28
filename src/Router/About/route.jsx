@@ -24,12 +24,17 @@ const Main = () => {
               The sky was cloudless and of a deep dark blue. The spectacle
               before us was indeed sublime.
             </p>
-            <button className="first">
+            <div className="buttons">
+              <button className="first">
               <span>Get started</span>
             </button>
             <button className="second">
               <span>Learn More</span>
             </button>
+            </div>
+          </div>
+          <div className="img-sidebar">
+            <img src="./img/bitmap.png" alt="aboutpng" width="360px"/>
           </div>
           <div className="img-side-bar">
             <img className="centre" src="./img/pic.png" alt="about png" />

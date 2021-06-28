@@ -59,6 +59,10 @@
         color: #fff;
       }
     }
+
+    .img-sidebar {
+      display: none;
+    }
     .img-side-bar {
       width: 500px;
       position: relative;
@@ -91,6 +95,101 @@
       .bottom {
         top: 200px;
         right: 100px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 375px) { 
+  .main-about {
+    background-color: #fef0e8;
+    width: 100%;
+
+    .first-section {
+      padding: 30px 20px;
+      display: block;
+      .side-bar {
+        width: 329px;
+
+        h1 {
+          font-weight: 400;
+          width: 100%;
+          font-size: 72px;
+          line-height: 80px;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 32px;
+          width: 100%;
+          margin-bottom: 30px;
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        button {
+          display: inline-block;
+          width: 170px;
+          height: 48px;
+          border: none;
+          background-color: #fef0e8;
+          border-radius: 8px;
+
+          span {
+            font-weight: bold;
+            font-size: 16px;
+          }
+        }
+
+        .first {
+          // background-color: #fa6a62;
+          color: rgba(51, 51, 51, 0.503623);
+          transition: all 0.4s linear;
+          border: 1px solid #fdcbc2;
+        }
+
+        .first:active {
+          opacity: 0.4;
+        }
+
+        .first:hover {
+          background-color: #fa6a62;
+          color: #fff;
+        }
+
+        .second {
+          color: rgba(51, 51, 51, 0.503623);
+          border: 1px solid #fdcbc2;
+          margin-left: 30px;
+          transition: all 0.4s linear;
+        }
+
+        .second:active {
+          opacity: 0.4;
+        }
+
+        .second:hover {
+          background-color: #fa6a62;
+          color: #fff;
+        }
+      }
+
+      .img-side-bar {
+        display: none;
+        position: static;
+      }
+
+      .img-sidebar {
+        display: block;
+        padding-top: 20px;
+        img {
+          width: 100%;
+        }
       }
     }
   }
