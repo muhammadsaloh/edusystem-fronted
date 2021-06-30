@@ -11,7 +11,7 @@ function Login() {
   useEffect(() => {
     if (submit && phone) {
       (async () => {
-        const response = await fetch("http://198.211.103.92:9010/users/login", {
+        const response = await fetch("http://198.211.103.92:8090/users/login", {
           method: "post",
           headers: {
             "Content-type": "application/json",
@@ -29,7 +29,7 @@ function Login() {
           window.localStorage.setItem("code", code);
         }
         if(json.ok) {
-          window.location.href = "http://198.211.103.92:3000/validate-code";
+          window.location.href = "http://198.211.103.92:8080/validate-code";
         }
 
         setSubmit(false);

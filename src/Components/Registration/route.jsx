@@ -14,7 +14,7 @@ function Registration() {
   useEffect(() => {
     if (submit && phone && name && bdate && gender) {
       (async () => {
-        const response = await fetch("http://198.211.103.92:9010/users/signup", {
+        const response = await fetch("http://198.211.103.92:8090/users/signup", {
           method: "post",
           headers: {
             "Content-type": "application/json",

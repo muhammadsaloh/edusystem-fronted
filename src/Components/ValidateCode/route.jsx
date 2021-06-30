@@ -17,7 +17,7 @@ function ValidateCode() {
         let id = window.localStorage.getItem("id");
 
         const response = await fetch(
-          "http://198.211.103.92:9010/users/validate-code",
+          "http://198.211.103.92:8090/users/validate-code",
           {
             method: "post",
             headers: {
@@ -36,7 +36,7 @@ function ValidateCode() {
         try {
           if (token) {
             window.localStorage.setItem("token", token);
-            window.location.href = "http://198.211.103.92:3000/";
+            window.location.href = "http://198.211.103.92:8080/";
           }
         } catch (e) {
           console.log(e);

@@ -44,7 +44,7 @@ const Get = () => {
         "Content-Type": "application/json",
         Authorization: `${token}`,
       };
-      let response = await fetch("http://198.211.103.92:9010/users", { headers });
+      let response = await fetch("http://198.211.103.92:8090/users", { headers });
       let json = await response.json();
       const { name, email, phone, role, bdate, photo, gender } = json.data;
 
@@ -138,7 +138,7 @@ const Edit = () => {
     const token = window.localStorage.getItem("token");
     if (submit && name && gender && email && bdate) {
       (async () => {
-        const response = await fetch("http://198.211.103.92:9010/users/edit", {
+        const response = await fetch("http://198.211.103.92:8090/users/edit", {
           method: "post",
           headers: {
             "Content-type": "application/json",
