@@ -34,7 +34,7 @@ const Main = () => {
             <span>Courses</span>
           </div>
         </div>
-      </main>
+      </main>	
     </>
   );
 };
