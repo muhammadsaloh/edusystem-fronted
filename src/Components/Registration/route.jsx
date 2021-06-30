@@ -94,8 +94,8 @@ function Registration() {
               <option value="" disabled={true}>
                 Select gender
               </option>
-              <option value="1">Male</option>
-              <option value="2">Female</option>
+              <option value="2">Male</option>
+              <option value="1">Female</option>
             </select>
 
             <div>
