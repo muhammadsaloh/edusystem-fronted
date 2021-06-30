@@ -21,16 +21,16 @@ function Login() {
           }),
         });
         const json = await response.json();
-        console.log(json);
+        // console.log(json);
         let { id, code } = json;
         // eslint-disable-next-line
         if ((id, code)) {
           window.localStorage.setItem("id", id);
           window.localStorage.setItem("code", code);
+        }
+        if(json.ok) {
           window.location.href = "http://198.211.103.92:3000/validate-code";
         }
-        // if(!(id, code)) {
-        // }
 
         setSubmit(false);
         setPhone("");
