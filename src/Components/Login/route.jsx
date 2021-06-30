@@ -27,8 +27,10 @@ function Login() {
         if ((id, code)) {
           window.localStorage.setItem("id", id);
           window.localStorage.setItem("code", code);
+          window.location.href = "http://198.211.103.92:3000/validate-code";
         }
-        window.location.href = "http://198.211.103.92:3000/validate-code";
+        // if(!(id, code)) {
+        // }
 
         setSubmit(false);
         setPhone("");
