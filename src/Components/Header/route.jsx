@@ -15,7 +15,7 @@ export default () => {
   return (
     <div>
       <header className="header">
-        <section className="header-section">
+        <section className="container-fluid header-section">
           <div>
             <h1>EDCT</h1>
           </div>
