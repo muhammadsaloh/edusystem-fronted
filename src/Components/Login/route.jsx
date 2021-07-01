@@ -72,6 +72,7 @@ function Login() {
           <div className="one">
             <span>New User ?</span>
             <Link to="/registration">Registration</Link>
+            <Link to="/validate-code">Validate Code</Link>
           </div>
         </div>
       </main>
