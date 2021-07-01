@@ -28,9 +28,9 @@ function Login() {
           window.localStorage.setItem("id", id);
           window.localStorage.setItem("code", code);
         }
-        if(json.ok) {
-          window.location.href = "http://198.211.103.92:8080/validate-code";
-        }
+        // if(json.ok) {
+        //   window.location.href = "http://198.211.103.92:8080/validate-code";
+        // }
 
         setSubmit(false);
         setPhone("");
