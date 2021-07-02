@@ -74,19 +74,17 @@ const Nav = () => {
               Courses
           </li>
           </NavLink>
-          {token && (
             <NavLink exact to="/blog">
             <li>
                 Blog
             </li>
           </NavLink>
-          )}
           <NavLink exact to="/contact">
           <li>
               Contact
           </li>
           </NavLink>
-          {token && (
+          {/* {token && (
             <NavLink exact to="/accaunt">
             <li>
                 <svg fill="#262626" height="16" viewBox="0 0 32 32" width="16">
@@ -95,8 +93,8 @@ const Nav = () => {
                 Accaunt
             </li>
             </NavLink>
-          )}
-          {!token && (
+          )} */}
+          {/* {!token && (
             <NavLink exact to="/login">
             <li>
                 <svg
@@ -119,7 +117,7 @@ const Nav = () => {
                 Login
             </li>
             </NavLink>
-          )}
+          )} */}
         </ul>
       </nav>
     </>

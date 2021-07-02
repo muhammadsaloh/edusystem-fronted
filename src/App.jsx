@@ -30,23 +30,23 @@ function App() {
             <Course />
           </Route>
           <Route path="/blog">
-            {token ? <Blog /> : <Redirect to="/login" />}
+            <Blog />
           </Route>
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/login">
+          {/* <Route path="/login">
             {!token ? <Login /> : <Redirect to="/" />}
           </Route>
           <Route path="/registration">
             {!token ? <Registration /> : <Redirect to="/" />}
-          </Route>
-          <Route path="/validate-code">
+          </Route> */}
+          {/* <Route path="/validate-code">
             {!token ? <ValidateCode /> : <Redirect to="/" />}
-          </Route>
-          <Route path="/accaunt">
-            {token ? <Accaunt /> : <Redirect to="/" />}
-          </Route>
+          </Route> */}
+          {/* <Route path="/accaunt">
+            <Accaunt />
+          </Route> */}
           <Route exact component={NotFoundPage} />
         </Switch>
       </Router>
