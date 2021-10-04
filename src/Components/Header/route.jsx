@@ -151,7 +151,7 @@ const Social = () => {
           {
             // eslint-disable-next-line
             <a
-              href="https://www.instagram.com/salohiddin_dilmatov/"
+              href="#"
               target="_blank"
             >
               <svg
